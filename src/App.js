@@ -12,14 +12,14 @@ function App() {
             Your Age : 20
           </p>
           </div>
-          {/* <div  className="box">
+          <div  className="box">
           <header>
             <h1>MANU</h1>
           </header>
           <p>
             Your Age : 20
           </p>
-          </div> */}
+          </div>
       </div>
     );
   }
