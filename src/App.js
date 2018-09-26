@@ -1,27 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
+import './App.css';
+import Person from './Person/Person';
 
-function App() {
+class App extends Component {
+  render () {
     return (
-      <div>
-        <div  className="box">
-          <header>
-            <h1>MAX</h1>
-          </header>
-          <p>
-            Your Age : 20
-          </p>
-          </div>
-          <div  className="box">
-          <header>
-            <h1>MANU</h1>
-          </header>
-          <p>
-            Your Age : 20
-          </p>
-          </div>
+      <div className="App">
+      <h>Hi, I'm a react developer</h>
+      <p>This is really working</p>
+      <Person />
       </div>
-    );
+    )
   }
-
+}
 
 export default App;
