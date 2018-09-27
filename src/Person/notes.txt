@@ -5,3 +5,8 @@
       {Math.floor(Math.random() * 30)}
 
 -----> 
+      props.name  : in functional components
+      this.props.name  : in class based components
+
+-----> 
+      
