@@ -1,10 +1,17 @@
 .App {
  text-align: center;
 }
+
+.margin {
+  margin: 100px;
+  margin-top: 10px;
+}
+
 .box {
   display: inline-block;
   margin: 10px;
   border: 5px solid #eee;
   box-shadow: 200px;
   padding: 20px;
+  margin: 15px;
 }
