@@ -4,6 +4,16 @@ import Person from './Person/Person';
 import Person_function from './Person/Person_function';
 
 class App extends Component {
+  state = {
+    person : [
+      { Empyoyee_ID: "87542", name: "Animesh", profile: "Engineer", sex: "Male", designation: "Enginer", Location: "Ahmedabad" },
+      { Empyoyee_ID: "87515", name: "Binayak", profile: "Backend Developer", sex: "Male", designation: "Enginer", Location: "Ahmedabad" },
+      { Empyoyee_ID: "84513216", name: "Shah", profile: "Dancer", sex: "Female", designation: "Arist", Location: "Ahmedabad" },
+      { Empyoyee_ID: "875151", name: "Rwanshi", profile: "Stupid Talketive", sex: "Female", designation: "Youtuber", Location: "Ranchi" },
+      { Empyoyee_ID: "464651", name: "Chandan", profile: "Backend Developer", sex: "Male", designation: "Enginer", Location: "Ahmedabad" },
+      { Empyoyee_ID: "87651", name: "Audi", profile: "Backend Developer", sex: "Male", designation: "Enginer", Location: "Ahmedabad"}
+    ]
+  }
   render () {
     return (
       <div>
@@ -13,14 +23,20 @@ class App extends Component {
       Hello I'm listing the details of few employees.<br /> 
       </div>
       <div className="margin">
-      <Person Empyoyee_ID="87542" name="Animesh" profile="Engineer" sex="Male" designation="Enginer" Location="Ahmedabad"/>
-      <br /><Person Empyoyee_ID="87515" name="Binayak" profile="Backend Developer" sex="Male" designation="Enginer" Location="Ahmedabad"/>
-      <br /><Person Empyoyee_ID="84513216" name="Shah" profile="Dancer" sex="Female" designation="Arist" Location="Ahmedabad"/>
-      <br /><Person Empyoyee_ID="875151" name="Rwanshi" profile="Stupid Talketive" sex="Female" designation="Youtuber" Location="Ranchi"/>
-      <br /><Person Empyoyee_ID="464651" name="Chandan" profile="Backend Developer" sex="Male" designation="Enginer" Location="Ahmedabad"/>
-      <br /><Person Empyoyee_ID="87651" name="Audi" profile="Backend Developer" sex="Male" designation="Enginer" Location="Ahmedabad"/>
+      <button>Switch Name</button>
+      <Person Empyoyee_ID={ this.state.person[0].Empyoyee_ID } name={ this.state.person[0].name } profile={ this.state.person[0].profile } 
+                    sex={ this.state.person[0].sex } designation={ this.state.person[0].designation } Location={ this.state.person[0].Location } />
+      <br /><Person Empyoyee_ID={ this.state.person[1].Empyoyee_ID } name={ this.state.person[1].name } profile={ this.state.person[1].profile } 
+                    sex={ this.state.person[1].sex } designation={ this.state.person[1].designation } Location={ this.state.person[1].Location } />
+      <br /><Person Empyoyee_ID={ this.state.person[2].Empyoyee_ID } name={ this.state.person[2].name } profile={ this.state.person[2].profile } 
+                    sex={ this.state.person[2].sex } designation={ this.state.person[2].designation } Location={ this.state.person[2].Location } />
+      <br /><Person Empyoyee_ID={ this.state.person[3].Empyoyee_ID } name={ this.state.person[3].name } profile={ this.state.person[3].profile } 
+                    sex={ this.state.person[3].sex } designation={ this.state.person[3].designation } Location={ this.state.person[3].Location } />
+      <br /><Person Empyoyee_ID={ this.state.person[4].Empyoyee_ID } name={ this.state.person[4].name } profile={ this.state.person[4].profile } 
+                    sex={ this.state.person[4].sex } designation={ this.state.person[4].designation } Location={ this.state.person[4].Location }/>
+           
       </div>
-      <Person_function name="Mr. India" designation="Enginer" />
+      <Person_function name="Mr. India" designation="Enginer">hello this is child component printed here </Person_function>
       </div>
     )
   }
