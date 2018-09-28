@@ -9,4 +9,11 @@
       this.props.name  : in class based components
 
 -----> 
+      switchNameHandler = () => {
+        console.log('Was clicked');
+      }
+
+      <button onClick={this.switchNameHandler} >Switch Name</button>
+
+-----> 
       

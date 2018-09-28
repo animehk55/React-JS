@@ -14,6 +14,10 @@ class App extends Component {
       { Empyoyee_ID: "87651", name: "Audi", profile: "Backend Developer", sex: "Male", designation: "Enginer", Location: "Ahmedabad"}
     ]
   }
+
+  switchNameHandler = () => {
+    console.log('Was clicked');
+  }
   render () {
     return (
       <div>
@@ -23,7 +27,7 @@ class App extends Component {
       Hello I'm listing the details of few employees.<br /> 
       </div>
       <div className="margin">
-      <button>Switch Name</button>
+      <button onClick={this.switchNameHandler} >Switch Name</button>
       <Person Empyoyee_ID={ this.state.person[0].Empyoyee_ID } name={ this.state.person[0].name } profile={ this.state.person[0].profile } 
                     sex={ this.state.person[0].sex } designation={ this.state.person[0].designation } Location={ this.state.person[0].Location } />
       <br /><Person Empyoyee_ID={ this.state.person[1].Empyoyee_ID } name={ this.state.person[1].name } profile={ this.state.person[1].profile } 
