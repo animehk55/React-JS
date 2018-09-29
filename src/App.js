@@ -12,7 +12,14 @@ class App extends Component {
       { Empyoyee_ID: "875151", name: "Rwanshi", profile: "Stupid Talketive", sex: "Female", designation: "Youtuber", Location: "Ranchi" },
       { Empyoyee_ID: "464651", name: "Chandan", profile: "Backend Developer", sex: "Male", designation: "Enginer", Location: "Ahmedabad" },
       { Empyoyee_ID: "87651", name: "Audi", profile: "Backend Developer", sex: "Male", designation: "Enginer", Location: "Ahmedabad"}
-    ]
+    ],
+    personFunction : [
+      { name: "Mintu", profile: "Engineer" },
+      { name: "Shalesh", profile: "Backend Developer" },
+      { name: "Harmeet", profile: "S-Engineer" },
+      { name: "Shaaz", profile: "S - Backend Developer" },
+      { name: "Animesh", profile: "__________" },
+      ]
   }
 
   switchNameHandler = () => {
@@ -25,8 +32,11 @@ class App extends Component {
         { Empyoyee_ID: "84513216", name: "Shah", profile: "Dancer", sex: "Female", designation: "Arist", Location: "Ahmedabad" },
         { Empyoyee_ID: "875151", name: "Rwanshi", profile: "Stupid Talketive", sex: "Female", designation: "Youtuber", Location: "Ranchi" },
         { Empyoyee_ID: "464651", name: "Chandan", profile: "Backend Developer", sex: "Male", designation: "Enginer", Location: "Ahmedabad" },
-        { Empyoyee_ID: "87651", name: "Audi", profile: "Backend Developer", sex: "Male", designation: "Enginer", Location: "Ahmedabad"}
-        
+        { Empyoyee_ID: "87651", name: "Audi", profile: "Backend Developer", sex: "Male", designation: "Enginer", Location: "Ahmedabad"} 
+      ],
+      personFunction: [
+        { name: "Mintu World", profile: "Engineer World" },
+        { name: "Shalesh World", profile: "Backend Developer" }
       ]
     })
   }
@@ -39,7 +49,7 @@ class App extends Component {
       Hello I'm listing the details of few employees.<br /> 
       </div>
       <div className="margin">
-      <button onClick={this.switchNameHandler} >Switch Name</button>
+      <button onClick={this.switchNameHandler}>Switch Name</button>
       <Person Empyoyee_ID={ this.state.person[0].Empyoyee_ID }
               name={ this.state.person[0].name } 
               profile={ this.state.person[0].profile } 
@@ -81,7 +91,38 @@ class App extends Component {
               click={this.switchNameHandler}
       />   
       </div>
-      <Person_function name="Mr. India" designation="Enginer">hello this is child component printed here </Person_function>
+      <Person_function 
+              name={this.state.personFunction[0].name} 
+              designation={this.state.personFunction[0].profile}
+      >
+              hello this is child component 1 printed here 
+      </Person_function>
+      <Person_function 
+              name={this.state.personFunction[1].name} 
+              designation={this.state.personFunction[1].profile}
+      >
+              hello this is child component 2 printed here 
+      </Person_function>
+      <Person_function 
+              name={this.state.personFunction[2].name} 
+              designation={this.state.personFunction[2].profile}
+      >
+              hello this is child component 3 printed here 
+      </Person_function>
+      <Person_function 
+              name={this.state.personFunction[3].name} 
+              designation={this.state.personFunction[3].profile}
+      >
+              hello this is child component 4 printed here 
+      </Person_function>
+      <Person_function 
+              name={this.state.personFunction[4].name} 
+              designation={this.state.personFunction[4].profile}
+              click={this.switchNameHandler}
+      >
+              hello this is child component 5 printed here 
+      </Person_function>
+
       </div>
     )
   }

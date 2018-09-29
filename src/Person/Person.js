@@ -4,7 +4,7 @@ class Person extends Component {
   render (props) {
     return (
       <div>
-        <p  onClick={props.click}>
+        <p>
           Empyoyee No. :{this.props.Empyoyee_ID} 
           <br />
           Name : {this.props.name}   
