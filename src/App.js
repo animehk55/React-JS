@@ -34,7 +34,6 @@ class App extends Component {
         { Empyoyee_ID: "464651", name: "Chandan", profile: "Backend Developer", sex: "Male", designation: "Enginer", Location: "Ahmedabad" },
         { Empyoyee_ID: "87651", name: "Audi", profile: "Backend Developer", sex: "Male", designation: "Enginer", Location: "Ahmedabad"} 
       ],
-      
       personFunction : [
         { name: "Mintu", profile: "Engineer_personFunction" },
         { name: "Shalesh", profile: "Backend Developer_ personFunction" },
