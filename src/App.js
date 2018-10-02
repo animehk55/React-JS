@@ -39,7 +39,7 @@ class App extends Component {
         { name: "Shalesh", profile: "Backend Developer_ personFunction" },
         { name: "Harmeet", profile: "S-Engineer_personFunction" },
         { name: "Shaaz", profile: "S - Backend Developer_personFunction" },
-        { name: "Animesh", profile: "___, personFunction" },
+        { name: "Animesh", profile: "___, https://github.com/animehk55/React-JS" },
         ]
     }
   )
