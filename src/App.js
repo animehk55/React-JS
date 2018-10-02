@@ -34,11 +34,16 @@ class App extends Component {
         { Empyoyee_ID: "464651", name: "Chandan", profile: "Backend Developer", sex: "Male", designation: "Enginer", Location: "Ahmedabad" },
         { Empyoyee_ID: "87651", name: "Audi", profile: "Backend Developer", sex: "Male", designation: "Enginer", Location: "Ahmedabad"} 
       ],
-      personFunction: [
-        { name: "Mintu World", profile: "Engineer World" },
-        { name: "Shalesh World", profile: "Backend Developer" }
-      ]
-    })
+      
+      personFunction : [
+        { name: "Mintu", profile: "Engineer_personFunction" },
+        { name: "Shalesh", profile: "Backend Developer_ personFunction" },
+        { name: "Harmeet", profile: "S-Engineer_personFunction" },
+        { name: "Shaaz", profile: "S - Backend Developer_personFunction" },
+        { name: "Animesh", profile: "___, personFunction" },
+        ]
+    }
+  )
   }
   render () {
     return (
