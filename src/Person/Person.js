@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import './../App.css';
 
 class Person extends Component {
   render (props) {
     return (
-      <div>
+      <div className="box">
         <p>
           Empyoyee No. :{this.props.Empyoyee_ID} 
           <br />

@@ -32,5 +32,46 @@
     })
 
 -----> 
-      see again 043
+      how to pass the new name Data 
+            1. bind(this)
+                    <button onClick={this.switchNameHandler.bind(this, "Chintu the Great")}>Switch Name</button>
+                    ----
+                    <Person_function 
+                        name={this.state.personFunction[4].name} 
+                        designation={this.state.personFunction[4].profile}
+                        click={this.switchNameHandler.bind(this, "Chintu burbak hai kaya")}
+                    > 
+            2. (sometimes inefficient) 
+                   <button onClick={() => this.switchNameHandler('Mai burbak tha pahale')}>Switch Name</button>
+
+----->
+      input handle
+
+      <input type="text" onChange={props.changed} />
+
+      nameChangedHandler = (event) => {
+        this.setState({ 
+                personFunction : [
+                        { name: "Input Handle", profile: "Engineer_personFunction" },
+                        { name: event.target.value, profile: "Backend Developer_ personFunction" },
+                        { name: "Harmeet", profile: "S-Engineer_personFunction" },
+                        { name: "Shaaz", profile: "S - Backend Developer_personFunction" },
+                        { name: event.target.value, profile: "___, https://github.com/animehetwetwt5tk55/Rekkhkhkhkhkact-JS" }
+                          ]
+                        }
+                    )
+                }
+                
+
+      changed={this.nameChangedHandler}
+
+
+
+
+ Two way handling
+      <input type="text" value={props.name} />
+      <input type="text" onChange={props.changed} value={props.name} />
+
+----->
+
       
