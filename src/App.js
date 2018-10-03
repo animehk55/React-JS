@@ -60,6 +60,14 @@ nameChangedHandler = (event) => {
                 }
                 
   render () {
+          const style = {
+                  background: 'white',
+                  font: 'inherit',
+                  border: '1px solid blue',
+                  padding: '8px',
+                  cursor: 'pointer'
+          };
+
     return (
       <div>
       <div className="App">
@@ -68,7 +76,11 @@ nameChangedHandler = (event) => {
       Hello I'm listing the details of few employees.<br /> 
       </div>
       <div className="margin">
-      <button onClick={() => this.switchNameHandler('Mai burbak tha pahale')}>Switch Name</button>
+      <button 
+        style={style}
+        onClick={() => this.switchNameHandler('Mai burbak tha pahale')}>
+        Switch Name
+      </button>
       <Person Empyoyee_ID={ this.state.person[0].Empyoyee_ID }
               name={ this.state.person[0].name } 
               profile={ this.state.person[0].profile } 
