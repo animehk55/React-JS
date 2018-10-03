@@ -22,13 +22,13 @@ class App extends Component {
       ]
   }
 
-  switchNameHandler = () => {
+  switchNameHandler = (newName) => {
     //console.log('Was clicked');
     //Don't mutate, or Do This : this.state.person[0].name = 'SOF';
     this.setState({ 
       person: [
         { Empyoyee_ID: "SOF_5421", name:  "SOF", profile:  "SOF_Enginer", sex: "NON_HUMAN", designation: "XXX", Location: "Austria" },
-        { Empyoyee_ID: "87515", name: "Binayak", profile: "Backend Developer", sex: "Male", designation: "Enginer", Location: "Ahmedabad" },
+        { Empyoyee_ID: newName, name: "Binayak", profile: "Backend Developer", sex: "Male", designation: "Enginer", Location: "Ahmedabad" },
         { Empyoyee_ID: "84513216", name: "Shah", profile: "Dancer", sex: "Female", designation: "Arist", Location: "Ahmedabad" },
         { Empyoyee_ID: "875151", name: "Rwanshi", profile: "Stupid Talketive", sex: "Female", designation: "Youtuber", Location: "Ranchi" },
         { Empyoyee_ID: "464651", name: "Chandan", profile: "Backend Developer", sex: "Male", designation: "Enginer", Location: "Ahmedabad" },
@@ -45,7 +45,29 @@ class App extends Component {
     }
   )
   }
+
+nameChangedHandler = (event) => {
+        this.setState({ 
+                personFunction : [
+                        { name: "Input Handle", profile: "Engineer_personFunction" },
+                        { name: event.target.value, profile: "Backend Developer_ personFunction" },
+                        { name: "Harmeet", profile: "S-Engineer_personFunction" },
+                        { name: "Shaaz", profile: "S - Backend Developer_personFunction" },
+                        { name: event.target.value, profile: "___, https://github.com/animehetwetwt5tk55/Rekkhkhkhkhkact-JS" }
+                          ]
+                        }
+                    )
+                }
+                
   render () {
+          const style = {
+                  background: 'white',
+                  font: 'inherit',
+                  border: '1px solid blue',
+                  padding: '8px',
+                  cursor: 'pointer'
+          };
+
     return (
       <div>
       <div className="App">
@@ -54,7 +76,11 @@ class App extends Component {
       Hello I'm listing the details of few employees.<br /> 
       </div>
       <div className="margin">
-      <button onClick={this.switchNameHandler}>Switch Name</button>
+      <button 
+        style={style}
+        onClick={() => this.switchNameHandler('Mai burbak tha pahale')}>
+        Switch Name
+      </button>
       <Person Empyoyee_ID={ this.state.person[0].Empyoyee_ID }
               name={ this.state.person[0].name } 
               profile={ this.state.person[0].profile } 
@@ -123,9 +149,10 @@ class App extends Component {
       <Person_function 
               name={this.state.personFunction[4].name} 
               designation={this.state.personFunction[4].profile}
-              click={this.switchNameHandler}
+              click={this.switchNameHandler.bind(this, "Chintu burbak hai kaya")}
+              changed={this.nameChangedHandler}
       >
-              hello this is child component 5 printed here 
+              hello this is child component 5 printed here
       </Person_function>
 
       </div>
