@@ -80,7 +80,7 @@
                   font: 'inherit',
                   border: '1px solid blue',
                   padding: '8px',
-                  cursor: 'pointer'
+                  
           };
 
            <button style={style}> </button> 

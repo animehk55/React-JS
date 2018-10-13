@@ -78,7 +78,7 @@ nameChangedHandler = (event) => {
       <div className="margin">
       <button 
         style={style}
-        onClick={() => this.switchNameHandler('Mai burbak tha pahale')}>
+        onClick={this.togglePersonsHandler}>
         Switch Name
       </button>
       <Person Empyoyee_ID={ this.state.person[0].Empyoyee_ID }
